@@ -1,5 +1,5 @@
 /*
- * *** YOUR NAME GOES HERE / YOUR SECTION NUMBER ***
+ * *** Michael Barrow / COMP 400C 001 ***
  *
  * This HashingProblems object contains three methods / problems that you must
  * complete utilize the HashMap object within the Java's Collection Framework Library.
@@ -34,7 +34,7 @@ class HashingProblems {
     public double getAverage(HashMap<Integer, Integer> map, int[] array) {
 
         /*
-         * ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOU NAME AT TOP OF FILE
+         * TODO ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOU NAME AT TOP OF FILE
          *
          * Note: if NO values found in common between the HashMap and supplied array,
          * returning 0.0 is NOT correct, as that is not the average value. Whereas
@@ -57,7 +57,7 @@ class HashingProblems {
       ArrayList<String> result = new ArrayList<>();
 
       /*
-       * ADD YOUR CODE HERE
+       * TODO ADD YOUR CODE HERE
        *
        * Hint: Consider iterating over the HashMap using the keySet method.
        */
@@ -107,7 +107,7 @@ class HashingProblems {
   public int twoSums(int[] numbers, int k) {
 
       /*
-       * ADD YOUR CODE HERE
+       * TODO ADD YOUR CODE HERE
        */
 
       return -1;

@@ -1,5 +1,5 @@
 /*
- * *** YOUR NAME GOES HERE / YOUR SECTION NUMBER ***
+ * *** Michael Barrow / COMP 400C 001 ***
  *
  * This hashMap object represents an over simplification of Java's implementation of HashMap within
  * Java's Collection Framework Library. You are to complete the following methods:
@@ -222,7 +222,7 @@ class myHashMap<K,V> {
     public V remove(K key) {
 
         /*
-         * ADD YOUR CODE HERE
+         * TODO ADD YOUR CODE HERE
          *
          * Review the code in the whole object to understand teh data structures layout.
          * Additionally, review the method put() for inserting a new Key / Value pair into
@@ -400,7 +400,7 @@ class myHashMap<K,V> {
     public V replace(K key, V val) {
 
         /*
-         * ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOUR NAME AT TOP OF FILE
+         * TODO ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOUR NAME AT TOP OF FILE
          *
          * Make sure you return the proper value based on the outcome of this method's
          * replace (see method's prologue above).
@@ -428,7 +428,7 @@ class myHashMap<K,V> {
     public boolean replace(K key, V oldVal, V newVal) {
 
         /*
-         * ADD YOUR CODE HERE
+         * TODO ADD YOUR CODE HERE
          *
          * This method should apply the precondition (aka, the Key already exists with the
          * value 'oldval', and is so, it SHOULD call replace(K, V) for code reuse.
