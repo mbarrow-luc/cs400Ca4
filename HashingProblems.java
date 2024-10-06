@@ -10,7 +10,6 @@
  *  - twoSums
  */
 
-import java.security.Key;
 import java.util.*;
 
 class HashingProblems {
@@ -23,8 +22,8 @@ class HashingProblems {
      * 'key' that is found in BOTH the HashMap and the array.
      *
      * For example, if only the keys 1 and 2 from the array are present in the HashMap, and
-     * lets say their values were 10 and 20, respectively, then the average is calculated
-     * as (10+20)/2 = 15. Lets also say the keys ‘7’ and ‘8’ are in the array, but those keys
+     * let's say their values were 10 and 20, respectively, then the average is calculated
+     * as (10+20)/2 = 15. Let's also say the keys ‘7’ and ‘8’ are in the array, but those keys
      * are not present in the HashMap. That means their corresponding values in the HashMap
      * are not included in the average calculation.
      */
@@ -105,11 +104,20 @@ class HashingProblems {
 
   public int twoSums(int[] numbers, int k) {
 
-      /*
-       * TODO ADD YOUR CODE HERE
-       */
+      Set<Integer> set = new HashSet<>();
+      int count = 0;
 
-      return -1;
+      for (int i : numbers) {
+          set.add(i);
+      }
+
+      for (Integer i : set) {
+          if (set.contains(i - k)) {
+              count++;
+          }
+      }
+
+      return count;
   }
 
 } /* end class HashingProblems */
