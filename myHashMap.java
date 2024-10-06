@@ -14,7 +14,7 @@
  */
 
 
-/**
+/*
  *
  *  This sample code is illustrating a hash table using separate chaining. To illustrate this,
  *  the code is building a Hash Map implementation that emulates Java's HashMap class. This class
@@ -78,7 +78,7 @@ import java.util.Set;
 import java.util.HashSet;
 
 
-/**
+/*
  * Class HashNode
  *
  * Node object representing a <Key, Value> pair stored in the Hash Map, elements
@@ -96,7 +96,7 @@ class HashNode<K,V> {
 }
 
 
-/**
+/*
  * A simple implementation of a HashMap that is built to emulate the Map Interface.
  * The <key, values> pairs are stored in a Map, where the key represents a hash
  * bucket slot number and the value represents a node which will form as linked-list
@@ -135,7 +135,7 @@ class myHashMap<K,V> {
     public boolean isEmpty()    { return size == 0; }
 
 
-    /**
+    /*
      * Method clear()
      *
      * Reinitialize the hash to INITIAL_NUM_BUCKETS. For each bucket, it resets
@@ -152,8 +152,8 @@ class myHashMap<K,V> {
     }
 
 
-    /**
-     * method getBucketindex()
+    /*
+     * method getBucketIndex()
      *
      * Performs two parts.
      *   1) First invokes a very simple hash code generator which generates a 32-bit
@@ -174,7 +174,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * method: V get(K)
      *
      * Returns the value to which the specified key is mapped, or null if this map contains
@@ -201,7 +201,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * method: V remove(K)
      *
      * Removes the entry for the specified key only if it is currently mapped to the
@@ -235,7 +235,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * Method: boolean remove(K, V)
      *
      * Removes the entry for the specified key only if it is currently mapped to some value
@@ -264,7 +264,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * method: V put(K, V)
      *
      * Associates the specified value with the specified key in this map. The method
@@ -356,14 +356,14 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * method: V putIfAbsent(K, V)
      *
      * If the specified key is not already associated with a value (or is mapped to null)
      * associates it with the given value and returns null, else returns the current value.
      *
      * @param: key   - The key to check if exists in the hashmap
-     * @parem: value - The value to place in as a <k, v> pair if
+     * @param: value - The value to place in as a <k, v> pair if
      *                 key does not exist
      *
      * @return: V - returns the existing value if the key is 
@@ -382,7 +382,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * method: V replace(K, V)
      *
      * Replaces the entry for the specified key only if it is currently mapped to some value (aka, the
@@ -410,7 +410,7 @@ class myHashMap<K,V> {
     }
 
     
-    /**
+    /*
      * method: boolean replace(K, V, V)
      *
      * Replaces the entry for the specified key only if currently mapped to the specified value.
@@ -431,14 +431,14 @@ class myHashMap<K,V> {
          * TODO ADD YOUR CODE HERE
          *
          * This method should apply the precondition (aka, the Key already exists with the
-         * value 'oldval', and is so, it SHOULD call replace(K, V) for code reuse.
+         * value 'oldVal', and is so, it SHOULD call replace(K, V) for code reuse.
          */
 
         return false;
     }
 
 
-    /**
+    /*
      * Method: boolean contains(V)
      *
      * Returns true if this map maps one or more keys to the specified value
@@ -463,7 +463,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * Method: boolean containsKey(K)
      *
      * Returns true if this map contains a mapping for the specified key.
@@ -479,7 +479,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * Method: Set<Map.Entry<K,V>> entrySet()
      *
      * Returns a 'Set' view of the mappings contained in the map.
@@ -500,7 +500,7 @@ class myHashMap<K,V> {
     }
 
 
-    /**
+    /*
      * Method: Set<K> keySet()
      *
      * Returns a 'Set' view of the keys contained in the map.
