@@ -56,12 +56,11 @@ class HashingProblems {
     
       ArrayList<String> result = new ArrayList<>();
 
-      /*
-       * TODO ADD YOUR CODE HERE
-       *
-       * Hint: Consider iterating over the HashMap using the keySet method.
-       */
-
+      for (Integer i : map.keySet()) {
+          if (i % 2 != 0) {
+              result.add(map.get(i));
+          }
+      }
 
       return result;
   }
