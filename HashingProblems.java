@@ -10,10 +10,8 @@
  *  - twoSums
  */
 
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.security.Key;
+import java.util.*;
 
 class HashingProblems {
 
@@ -33,15 +31,17 @@ class HashingProblems {
 
     public double getAverage(HashMap<Integer, Integer> map, int[] array) {
 
-        /*
-         * TODO ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOU NAME AT TOP OF FILE
-         *
-         * Note: if NO values found in common between the HashMap and supplied array,
-         * returning 0.0 is NOT correct, as that is not the average value. Whereas
-         * returning 0.0/0.0 IS correct (which would return a non-number).
-         */
+        int total = 0;
+        int count = 0;
 
-         return 0.0 / 0.0;
+        for (Integer i : array) {
+            if (map.containsKey(i)) {
+                total += map.get(i);
+                count++;
+            }
+        }
+
+        return (double) total / count;
   }
 
 
