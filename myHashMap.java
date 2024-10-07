@@ -35,7 +35,7 @@
  *  PUBLIC METHODS:
  *  ---------------
  *
- *     void  clear()               - Removes all of the mappings from this map.
+ *     void  clear()               - Removes all the mappings from this map.
  *  boolean  containsValue(V)      - Returns true if this map maps one or more keys to the specified value
  *  boolean  containsKey(K)        - Returns true if this map contains a mapping for the specified key.
  *       V   get(K)                - Returns the value to which the specified key is mapped, or null
@@ -157,7 +157,7 @@ class myHashMap<K,V> {
      *
      * Performs two parts.
      *   1) First invokes a very simple hash code generator which generates a 32-bit
-     *      integer. The mask (bit operation) masks off the sign bit )turns the
+     *      integer. The mask (bit operation) masks off the sign bit (turns the
      *      32-bit integer into a 31-bit non-negative integer).
      *   2) Second, it invokes a compressor expression (in this case, performing a
      *      MOD operation). This compresses the hash number to between 0 and
@@ -221,15 +221,19 @@ class myHashMap<K,V> {
 
     public V remove(K key) {
 
-        /*
-         * TODO ADD YOUR CODE HERE
-         *
-         * Review the code in the whole object to understand teh data structures layout.
-         * Additionally, review the method put() for inserting a new Key / Value pair into
-         * the HashMap. This method will do the opposite by removing an element. Do see
-         * the return value discussion in this method's prologue to make sure the correct
-         * return value is returned the invoking function based on the remove outcome.
-         */
+        int index = getBucketIndex(key);
+        HashNode<K, V> current = bucket.get(index);
+        HashNode<K, V> toRemove = new HashNode<>();
+        toRemove.key = key;
+
+        while (current != null) {
+            if (current.key == toRemove.key) {
+                toRemove.value = current.value;
+                bucket.remove(current);
+                return toRemove.value;
+            }
+            current = current.next;
+        }
 
         return null;
     }
