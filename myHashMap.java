@@ -403,14 +403,18 @@ class myHashMap<K,V> {
 
     public V replace(K key, V val) {
 
-        /*
-         * TODO ADD YOUR CODE HERE - DO NOT FORGET TO ADD YOUR NAME AT TOP OF FILE
-         *
-         * Make sure you return the proper value based on the outcome of this method's
-         * replace (see method's prologue above).
-         */
+        int index = getBucketIndex(key);
+        HashNode<K, V> current = bucket.get(index);
+        V toReplace = this.get(key);
 
-        return val;
+        while (current != null) {
+            if (current.key == key) {
+                current.value = val;
+            }
+            current = current.next;
+        }
+
+        return toReplace;
     }
 
     
@@ -431,12 +435,10 @@ class myHashMap<K,V> {
 
     public boolean replace(K key, V oldVal, V newVal) {
 
-        /*
-         * TODO ADD YOUR CODE HERE
-         *
-         * This method should apply the precondition (aka, the Key already exists with the
-         * value 'oldVal', and is so, it SHOULD call replace(K, V) for code reuse.
-         */
+        if (oldVal == this.get(key)) {
+            replace(key, newVal);
+            return true;
+        }
 
         return false;
     }
