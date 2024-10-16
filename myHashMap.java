@@ -230,7 +230,8 @@ class myHashMap<K,V> {
             if (current.key == key) {
                 if (current.next == null) {
                     this.size--;
-                    return bucket.set(index, null).value;
+                    bucket.set(index, null);
+                    return toRemove;
                 }
                 else if (prev != null) {
                     this.size--;
