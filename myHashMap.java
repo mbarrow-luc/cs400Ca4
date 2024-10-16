@@ -229,15 +229,13 @@ class myHashMap<K,V> {
         while (current != null) {
             if (current.key == key) {
                 if (current.next == null) {
-                    this.size--;
                     bucket.set(index, null);
-                    return toRemove;
                 }
                 else if (prev != null) {
-                    this.size--;
                     prev.next = current.next;
-                    return toRemove;
                 }
+                this.size--;
+                return toRemove;
             }
             prev = current;
             current = current.next;
