@@ -223,15 +223,22 @@ class myHashMap<K,V> {
 
         int index = getBucketIndex(key);
         HashNode<K, V> current = bucket.get(index);
-        HashNode<K, V> toRemove = new HashNode<>();
-        toRemove.key = key;
+        HashNode<K, V> prev = null;
+        V toRemove = this.get(key);
 
         while (current != null) {
-            if (current.key == toRemove.key) {
-                toRemove.value = current.value;
-                bucket.remove(current);
-                return toRemove.value;
+            if (current.key == key) {
+                if (current.next == null) {
+                    this.size--;
+                    return bucket.set(index, null).value;
+                }
+                else if (prev != null) {
+                    this.size--;
+                    prev.next = current.next;
+                    return toRemove;
+                }
             }
+            prev = current;
             current = current.next;
         }
 
